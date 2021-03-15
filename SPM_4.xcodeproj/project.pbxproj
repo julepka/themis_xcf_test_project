@@ -14,6 +14,7 @@
 		6D670C3E25FA785800BD5242 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D670C3D25FA785800BD5242 /* Assets.xcassets */; };
 		6D670C4125FA785800BD5242 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D670C3F25FA785800BD5242 /* LaunchScreen.storyboard */; };
 		6DD55DC225FFAF5500A462FF /* themis in Frameworks */ = {isa = PBXBuildFile; productRef = 6DD55DC125FFAF5500A462FF /* themis */; };
+		D9095FDF25FFEEAA00435096 /* ThemisTrampoline.mm in Sources */ = {isa = PBXBuildFile; fileRef = D9095FDE25FFEEAA00435096 /* ThemisTrampoline.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,16 @@
 		6D670C3D25FA785800BD5242 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D670C4025FA785800BD5242 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D670C4225FA785800BD5242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9095FD425FFEE4300435096 /* secure_session.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = secure_session.hpp; sourceTree = "<group>"; };
+		D9095FD525FFEE4300435096 /* secure_keygen.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = secure_keygen.hpp; sourceTree = "<group>"; };
+		D9095FD625FFEE4300435096 /* secure_rand.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = secure_rand.hpp; sourceTree = "<group>"; };
+		D9095FD725FFEE4300435096 /* secure_cell.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = secure_cell.hpp; sourceTree = "<group>"; };
+		D9095FD825FFEE4300435096 /* secure_message.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = secure_message.hpp; sourceTree = "<group>"; };
+		D9095FD925FFEE4300435096 /* secure_comparator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = secure_comparator.hpp; sourceTree = "<group>"; };
+		D9095FDA25FFEE4300435096 /* exception.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = exception.hpp; sourceTree = "<group>"; };
+		D9095FDC25FFEEA900435096 /* SPM_4-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SPM_4-Bridging-Header.h"; sourceTree = "<group>"; };
+		D9095FDD25FFEEAA00435096 /* ThemisTrampoline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThemisTrampoline.h; sourceTree = "<group>"; };
+		D9095FDE25FFEEAA00435096 /* ThemisTrampoline.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ThemisTrampoline.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,7 @@
 		6D670C3325FA785600BD5242 /* SPM_4 */ = {
 			isa = PBXGroup;
 			children = (
+				D9095FD325FFEE4300435096 /* themispp */,
 				6D670C3425FA785600BD5242 /* AppDelegate.swift */,
 				6D670C3625FA785600BD5242 /* SceneDelegate.swift */,
 				6D670C3825FA785600BD5242 /* ViewController.swift */,
@@ -65,8 +77,25 @@
 				6D670C3D25FA785800BD5242 /* Assets.xcassets */,
 				6D670C3F25FA785800BD5242 /* LaunchScreen.storyboard */,
 				6D670C4225FA785800BD5242 /* Info.plist */,
+				D9095FDD25FFEEAA00435096 /* ThemisTrampoline.h */,
+				D9095FDE25FFEEAA00435096 /* ThemisTrampoline.mm */,
+				D9095FDC25FFEEA900435096 /* SPM_4-Bridging-Header.h */,
 			);
 			path = SPM_4;
+			sourceTree = "<group>";
+		};
+		D9095FD325FFEE4300435096 /* themispp */ = {
+			isa = PBXGroup;
+			children = (
+				D9095FD425FFEE4300435096 /* secure_session.hpp */,
+				D9095FD525FFEE4300435096 /* secure_keygen.hpp */,
+				D9095FD625FFEE4300435096 /* secure_rand.hpp */,
+				D9095FD725FFEE4300435096 /* secure_cell.hpp */,
+				D9095FD825FFEE4300435096 /* secure_message.hpp */,
+				D9095FD925FFEE4300435096 /* secure_comparator.hpp */,
+				D9095FDA25FFEE4300435096 /* exception.hpp */,
+			);
+			path = themispp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +132,7 @@
 				TargetAttributes = {
 					6D670C3025FA785600BD5242 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -147,6 +177,7 @@
 			files = (
 				6D670C3925FA785600BD5242 /* ViewController.swift in Sources */,
 				6D670C3525FA785600BD5242 /* AppDelegate.swift in Sources */,
+				D9095FDF25FFEEAA00435096 /* ThemisTrampoline.mm in Sources */,
 				6D670C3725FA785600BD5242 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +325,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJP3L9Z2T7;
 				INFOPLIST_FILE = SPM_4/Info.plist;
@@ -303,6 +335,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.julep.SPM-4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SPM_4/SPM_4-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -313,6 +347,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YJP3L9Z2T7;
 				INFOPLIST_FILE = SPM_4/Info.plist;
@@ -322,6 +357,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.julep.SPM-4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SPM_4/SPM_4-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
